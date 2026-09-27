@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#03070b"><meta name="description" content="JARVIS personal AI assistant">
+<title>JARVIS AI</title><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg"><div class="grid"></div><div class="orbital o1"></div><div class="orbital o2"></div><div class="stars"></div></div>
+<header><div><div class="eyebrow">PERSONAL AI SYSTEM</div><h1>JARVIS</h1></div><div id="status" class="status"><span></span> ONLINE</div></header>
+<main>
+<section id="home" class="page active">
+<div class="hero"><div class="core-wrap"><div id="core" class="core" role="button" aria-label="Activate JARVIS"><div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div><div class="core-inner"><span>J</span></div><div class="wave"></div></div></div>
+<div id="coreState" class="core-state">READY</div><div id="transcript" class="transcript">Tap the core or microphone to speak</div></div>
+<div class="panel status-panel"><div><small>SYSTEM</small><b>ALL SYSTEMS NOMINAL</b></div><div><small>VOICE</small><b id="voiceStatus">READY</b></div><div><small>MEMORY</small><b id="memoryCount">0 ITEMS</b></div></div>
+<div class="quick"><button data-command="Hello JARVIS">ASK JARVIS</button><button data-command="What can you do?">CAPABILITIES</button><button data-command="What time is it?">TIME</button><button data-command="Open settings">SETTINGS</button></div>
+</section>
+<section id="chat" class="page"><div class="section-title"><span>CONVERSATION</span><button id="clearChat">CLEAR</button></div><div id="messages" class="messages"></div><form id="chatForm" class="composer"><input id="chatInput" autocomplete="off" placeholder="Message JARVIS…"><button>➤</button></form></section>
+<section id="memory" class="page"><div class="section-title"><span>MEMORY CORE</span><button id="addMemory">+ ADD</button></div><div class="panel memory-head"><b>Persistent memory</b><span id="memoryHint">Stored locally on this device</span></div><div id="memoryList" class="memory-list"></div></section>
+<section id="history" class="page"><div class="section-title"><span>MISSION LOG</span><button id="clearHistory">CLEAR</button></div><div id="historyList" class="history-list"></div></section>
+<section id="settings" class="page"><div class="section-title"><span>SYSTEM SETTINGS</span></div>
+<div class="setting panel"><label>Assistant name<input id="assistantName" value="JARVIS"></label><label>Language<select id="language"><option value="hi">Hindi / Hinglish</option><option value="en">English</option></select></label><label>Voice<select id="voiceSelect"><option>System default</option></select></label><label>Gemini API key<input id="apiKey" type="password" placeholder="Optional — stored locally"></label><button id="saveSettings" class="primary">SAVE SETTINGS</button></div>
+<div class="panel note"><b>Privacy</b><p>Your memories and settings are stored locally in this browser. Do not store passwords, banking details, or other secrets.</p></div></section>
+</main>
+<nav><button class="nav active" data-page="home">⌂<span>HOME</span></button><button class="nav" data-page="chat">◉<span>CHAT</span></button><button class="nav voice" id="navVoice">🎙<span>VOICE</span></button><button class="nav" data-page="memory">◇<span>MEMORY</span></button><button class="nav" data-page="settings">⚙<span>SETTINGS</span></button></nav>
+<div id="toast"></div>
+<script src="app.js"></script>
+</body></html>
